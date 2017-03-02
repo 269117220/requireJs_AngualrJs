@@ -1,6 +1,5 @@
-define(['angular', "Underscore", 'require', 'angular-route', 'jquery', 'bootstrap'], function(angular, _) {
+define(['angular', "Underscore",'model', 'require', 'angular-route', 'jquery', 'bootstrap','pageOneController'], function(angular, _,app) {
 
-    var app = angular.module('webapp', ['ngRoute']);
 
     app.config(['$routeProvider', '$controllerProvider',
         function($routeProvider, $controllerProvider) {
@@ -9,7 +8,7 @@ define(['angular', "Underscore", 'require', 'angular-route', 'jquery', 'bootstra
                     templateUrl: 'contentPage.html',
                     resolve: {
                         message: function() {
-                            return "aaaaaaa";
+                            return "resolve传递的值";
                         }
                     },
                     controller: 'pageOneController'
@@ -24,16 +23,9 @@ define(['angular', "Underscore", 'require', 'angular-route', 'jquery', 'bootstra
         }
     ]);
 
-    app.controller('pageOneController', function($rootScope, message) {
-        // _.each([1, 2, 3], alert);
-        alert(message);
-        // alert(_.map([1, 2, 3], function(num) {
-        //     return num * 3;
-        // }));
-    });
     app.run(function($rootScope, $location, $templateCache) {
         $rootScope.$on('$routeChangeStart', function(event, next, current) {
-            alert("进入状态改变");
+            
         });
     });
     return app;

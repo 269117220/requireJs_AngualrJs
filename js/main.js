@@ -30,6 +30,7 @@
 
     require(['angular', 'index'], function(angular) {
         angular.bootstrap(document, ['webapp']);
+        
     });
 
 })(window);

@@ -10,9 +10,9 @@
 <body>
     <div><span ng-click='clickEvent()'>{{test}}</span></div>
     <ol class="breadcrumb">
-        <li><a href="#/pageOne">page one</a></li>
+        <li class="active"><a href="#/pageOne">page one</a></li>
         <li><a href="#/pageTwo">page two</a></li>
-        <li class="active"><a href="#/pageThree">page three</a></li>
+        <li><a href="#/pageThree">page three</a></li>
     </ol>
     <button class="btn btn-danger">test</button>
     <!--     <ul class="btn-group">
@@ -20,7 +20,7 @@
         <li class="btn btn-default"><a href="#/pageTwo">page two</a></li>
         <li class="btn btn-default"><a href="#/pageThree">page three</a></li>
     </ul> -->
-    <div  ng-view></div>
+    <div ng-view></div>
     <script data-main="js/main" src="js/require.min.js" id="main"></script>
 </body>
 
